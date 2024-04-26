@@ -13,13 +13,10 @@ public class CreateProductCommandValidator : AbstractValidator<CreateProductComm
         RuleFor(x => x.ImageFile).NotEmpty().WithMessage("Image file is required.");
     }
 }
-internal class CreateProductHandler(IDocumentSession session, ILogger<CreateProductHandler> logger) : ICommandHandler<CreateProductCommand, CreateProductResult>
+internal class CreateProductHandler(IDocumentSession session) : ICommandHandler<CreateProductCommand, CreateProductResult>
 {
     public async Task<CreateProductResult> Handle(CreateProductCommand command, CancellationToken cancellationToken)
     {
-
-        logger.LogInformation("Creating product {@command}", command);       
-
         var product = new Product
         {
             Name = command.Name,
