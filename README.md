@@ -35,8 +35,8 @@ Bu proje, .NET Core 8 kullanılarak geliştirilen bir e-ticaret uygulamasıdır.
 
 ## Veritabanları
 
-- **CatalogAPI** ve **OrderAPI** MSSQL veritabanını kullanır.
-- **BasketAPI** PostgreSQL veritabanını kullanır.
+- **OrderAPI** MSSQL veritabanını kullanır.
+- **BasketAPI** ve **CatalogAPI** PostgreSQL veritabanını kullanır.
 - **DiscountAPI** SQLite veritabanını kullanır.
 
 ## Katkıda Bulunma
