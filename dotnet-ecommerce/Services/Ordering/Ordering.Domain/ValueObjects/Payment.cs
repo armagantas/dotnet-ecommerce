@@ -1,5 +1,4 @@
 ﻿namespace Ordering.Domain.ValueObjects;
-
 public record Payment
 {
     public string? CardName { get; } = default!;
@@ -10,7 +9,6 @@ public record Payment
 
     protected Payment()
     {
-
     }
 
     private Payment(string cardName, string cardNumber, string expiration, string cvv, int paymentMethod)
