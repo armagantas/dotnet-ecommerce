@@ -34,4 +34,3 @@ public class UpdateOrderHandler(IApplicationDbContext dbContext) : ICommandHandl
             status: orderDto.Status);
     }
 }
-}
