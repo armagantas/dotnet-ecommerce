@@ -1,5 +1,4 @@
-﻿
-using BuildingBlocks.Pagination;
+﻿using BuildingBlocks.Pagination;
 using Ordering.Application.Extensions;
 
 namespace Ordering.Application.Orders.Queries.GetOrders;
@@ -20,6 +19,6 @@ public class GetOrdersHandler(IApplicationDbContext dbContext) : IQueryHandler<G
             .Take(pageSize)
             .ToListAsync(cancellationToken);
 
-        return new GetOrdersResult(new PaginatedResult<OrderDto>(orders.ToOrderDtoList(), totalCount, pageIndex, pageSize));
+        return new GetOrdersResult(new PaginatedResult<OrderDto>(pageIndex,pageSize,totalCount,orders.ToOrderDtoList()));
     }
 }
