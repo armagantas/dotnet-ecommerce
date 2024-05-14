@@ -5,4 +5,5 @@ global using Ordering.Application.Exceptions;
 global using Ordering.Domain.Models;
 global using Ordering.Domain.ValueObjects;
 global using FluentValidation;
+global using Microsoft.EntityFrameworkCore;
 
